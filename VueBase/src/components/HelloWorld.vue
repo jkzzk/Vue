@@ -1,83 +1,30 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
+    {{hello}}
+    {{1+1}}
+    {{哈哈}}
+    {{"哈哈"}}
+    {{0<10 ? "对的" : "错的"}}
+    <p v-html="hello"></p>
+    <p v-text="hello1"></p>
+
+    <template v-if="show">
+      <span>我是if标签中的内容</span>
+    </template>
+    <template v-else>
+      <span>我是else中的内容</span>
+    </template>
+
+    <span v-bind:class="ha">我是ha</span>
+
     <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
+      <li v-for="(index,name) in names" v-bind:key="index">{{ name }}-{{index}}</li>
     </ul>
-    <h2>Ecosystem</h2>
+
     <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
+      <li v-for="(wife,index) in wifes" :key="index">
+          <span>{{wife.name}}</span>
+          <span>{{wife.status}}</span>
       </li>
     </ul>
   </div>
@@ -88,7 +35,19 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      hello:"Hello VUE",
+      hello1:"<p>Hello VUE</p>",
+      哈哈:"哈哈",
+      ha:"ha1",
+      show:false,
+      names:["I","love","王彩霞"],
+      wifes:[
+        {id:0,name:"王彩霞",status:"开心"},
+        {id:1,name:"王彩霞",status:"生气"},
+        {id:2,name:"王彩霞",status:"哭哭"},
+        {id:3,name:"王彩霞",status:"打张泽昆"},
+        {id:3,name:"王彩霞",status:"被张泽昆打"}
+      ]
     }
   }
 }
@@ -109,5 +68,12 @@ li {
 }
 a {
   color: #42b983;
+}
+.ha {
+  color: #42B983;
+}
+
+.ha1 {
+  color: brown;
 }
 </style>
