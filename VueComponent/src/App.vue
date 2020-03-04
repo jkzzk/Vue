@@ -2,25 +2,19 @@
   <div id="app">
     <img src="./assets/logo.png">
 <!--    <HelloWorld/>-->
-<!--    <Events/>-->
-<!--    <FormData />-->
-    <Style />
+    <Customer />
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld'
-import Events from './components/Events'
-import FormData from './components/FormData'
-import Style from './components/Style'
+import Customer from './components/Customer'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
-    Events,
-    FormData,
-    Style
+    Customer
   }
 }
 </script>
