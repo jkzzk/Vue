@@ -1,19 +1,20 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
+    <NavList />
+    <router-view/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  import NavList from "./components/NavList";
+
+  export default {
+    name: 'app',
+    components : {
+      NavList
+    }
   }
-}
 </script>
 
 <style>
