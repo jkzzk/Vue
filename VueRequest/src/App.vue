@@ -1,17 +1,23 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <HelloWorld/>
+<!--    <HelloWorld/>-->
+<!--    <AxiosReq />-->
+    <AxiosReqPost />
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld'
+import AxiosReq from './components/AxiosReq/AxiosReq'
+import AxiosReqPost from "./components/AxiosReq/AxiosReqPost";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    AxiosReq,
+    AxiosReqPost
   }
 }
 </script>
