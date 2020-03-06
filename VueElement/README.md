@@ -1,21 +1,10 @@
-# ele
+集成element-ui
+    1.安装element-ui组件
+        npm install element-ui --save--dev
+    2.安装按需加载依赖
+        npm install babel-plugin-component -D
+    3.引入
+        import {Button,多个组件} from "element-ui"
+        Vue.use(Button);
+        Vue.use(其他组件);
 
-> Vue Element
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
