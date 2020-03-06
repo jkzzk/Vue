@@ -7,6 +7,9 @@
       <li>
         <router-link :to="urlData.zzk">zzk</router-link>
       </li>
+      <li>
+        <router-link :to="urlData.hkzzk">hkzzk</router-link>
+      </li>
     </ul>
   </div>
 </template>
@@ -16,7 +19,8 @@
         return {
           urlData : {
             world : "/world",
-            zzk : "/zzk"
+            zzk : "/zzk",
+            hkzzk : "/hkzzk"
           }
         }
       },
@@ -30,7 +34,6 @@
     text-decoration: none;
   }
   ul {
-    text-align: center;
   }
   ul li {
     display: inline-block;
