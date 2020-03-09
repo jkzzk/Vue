@@ -3,8 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import {Button} from "element-ui"
+import {Button,Table,TableColumn } from "element-ui"
 
+Vue.use(Table);
+Vue.use(TableColumn);
 Vue.use(Button);
 Vue.config.productionTip = false;
 
